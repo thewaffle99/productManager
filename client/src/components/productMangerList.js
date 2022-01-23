@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "@reach/router";
 const ProductManagerList = (props) => {
   const { product, setProduct } = props;
 
@@ -17,9 +18,17 @@ const ProductManagerList = (props) => {
 
   return (
     <div className="mx-5 my-5 d-flex justify-content-center">
-      <div className=" justify-content-center">
+      <div>
         {product.map((product, index) => {
-          return <p key={index}>{product.title}</p>;
+          return (
+            <Link
+              className="d-flex justify-content-center"
+              to={`/api/product/${product._id}`}
+              key={index}
+            >
+              {product.title}
+            </Link>
+          );
         })}
       </div>
     </div>

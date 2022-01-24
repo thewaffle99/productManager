@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import ProductManagerForm from "../components/productManagerForm";
-import ProductManagerList from "../components/productMangerList";
+import ProductManagerList from "../components/productManagerList";
 const Main = (props) => {
   const [product, setProduct] = useState([]);
 

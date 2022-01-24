@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "@reach/router";
 
 const Detail = (props) => {
   const [product, setProduct] = useState({});
@@ -18,6 +19,9 @@ const Detail = (props) => {
       <p>{product.title}</p>
       <p>$ {product.price}</p>
       <p>{product.description}</p>
+      <Link className="btn btn-primary" to="/">
+        Home
+      </Link>
     </div>
   );
 };

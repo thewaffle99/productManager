@@ -17,6 +17,7 @@ const ProductManagerForm = (props) => {
       .then((res) => {
         console.log(res);
         console.log(res.data);
+        setProduct([...product, res.data]);
       })
       .catch((err) => console.log(err));
   };
@@ -39,7 +40,7 @@ const ProductManagerForm = (props) => {
           <br />
           <input type="text" onChange={(e) => setDescription(e.target.value)} />
         </p>
-        <input type="submit" />
+        <input className="btn btn-primary" type="submit" />
       </form>
     </div>
   );

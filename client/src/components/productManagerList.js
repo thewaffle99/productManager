@@ -19,8 +19,9 @@ const ProductManagerList = (props) => {
 
   const deleteProduct = (id) => {
     axios
-      .delete(`https://localhost:8000/api/product/${id}`)
+      .delete(`http://localhost:8000/api/product/${id}`)
       .then((res) => {
+        console.log(res);
         console.log(res.data);
         setProduct(product.filter((product, index) => product._id !== id));
       })
